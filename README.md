@@ -5,7 +5,7 @@ The CountryLayer SDK for .NET is a library that allows you to access the Country
 - You need a CountryLayer API key. You can get one for free at [https://countrylayer.com](https://countrylayer.com).
 
 ## Usage
-The CountryLayer SDK for .NET is available as a NuGet package. You can install it using the following command:
+The CountryLayer SDK for .NET is available as a [NuGet package](https://www.nuget.org/packages/CountryLayer/). You can install it using the following command:
 
 ```bash
 dotnet add package CountryLayer

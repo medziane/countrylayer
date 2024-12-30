@@ -10,6 +10,7 @@ public interface ICountryLayer
     /// </summary>
     /// <param name="cancellationToken">A cancellation token to cancel the operation.</param>
     /// <returns>A task that represents the asynchronous operation. The task result contains a list of countries.</returns>
+    /// <exception cref="Exception">Thrown when an error occurs while retrieving the countries.</exception>
     [Get("/v2/all")]
     Task<List<Country>> GetAllCountries(CancellationToken cancellationToken);
 
@@ -19,6 +20,7 @@ public interface ICountryLayer
     /// <param name="name">The name of the country.</param>
     /// <param name="cancellationToken">A cancellation token to cancel the operation.</param>
     /// <returns>A task that represents the asynchronous operation. The task result contains a list of countries.</returns>
+    /// <exception cref="Exception">Thrown when an error occurs while retrieving the countries.</exception>
     [Get("/v2/name/{name}")]
     Task<List<Country>> GetCountriesByName(
         string name,
@@ -30,6 +32,7 @@ public interface ICountryLayer
     /// <param name="capital">The capital of the country.</param>
     /// <param name="cancellationToken">A cancellation token to cancel the operation.</param>
     /// <returns>A task that represents the asynchronous operation. The task result contains a list of countries.</returns>
+    /// <exception cref="Exception">Thrown when an error occurs while retrieving the countries.</exception>
     [Get("/v2/capital/{capital}")]
     Task<List<Country>> GetCountriesByCapital(
         string capital,
@@ -42,6 +45,7 @@ public interface ICountryLayer
     /// <param name="fullText">A boolean indicating whether to perform a full-text search.</param>
     /// <param name="cancellationToken">A cancellation token to cancel the operation.</param>
     /// <returns>A task that represents the asynchronous operation. The task result contains a list of countries.</returns>
+    /// <exception cref="Exception">Thrown when an error occurs while retrieving the countries.</exception>
     [Get("/v2/name/{name}")]
     Task<List<Country>> GetCountriesByName(
         string name,
@@ -54,6 +58,7 @@ public interface ICountryLayer
     /// <param name="language">The language to search for.</param>
     /// <param name="cancellationToken">A cancellation token to cancel the operation.</param>
     /// <returns>A task that represents the asynchronous operation. The task result contains a list of countries.</returns>
+    /// <exception cref="Exception">Thrown when an error occurs while retrieving the countries.</exception>
     [Get("/v2/language/{language}")]
     Task<List<Country>> GetCountriesByLanguage(
         string language,
@@ -65,6 +70,7 @@ public interface ICountryLayer
     /// <param name="currency">The currency to search for.</param>
     /// <param name="cancellationToken">A cancellation token to cancel the operation.</param>
     /// <returns>A task that represents the asynchronous operation. The task result contains a list of countries.</returns>
+    /// <exception cref="Exception">Thrown when an error occurs while retrieving the countries.</exception>
     [Get("/v2/currency/{currency}")]
     Task<List<Country>> GetCountriesByCurrency(
         string currency,
@@ -76,6 +82,7 @@ public interface ICountryLayer
     /// <param name="region">The region to search for.</param>
     /// <param name="cancellationToken">A cancellation token to cancel the operation.</param>
     /// <returns>A task that represents the asynchronous operation. The task result contains a list of countries.</returns>
+    /// <exception cref="Exception">Thrown when an error occurs while retrieving the countries.</exception>
     [Get("/v2/region/{region}")]
     Task<List<Country>> GetCountriesByRegion(
         string region,
@@ -87,6 +94,7 @@ public interface ICountryLayer
     /// <param name="regionalBlock">The regional block to search for.</param>
     /// <param name="cancellationToken">A cancellation token to cancel the operation.</param>
     /// <returns>A task that represents the asynchronous operation. The task result contains a list of countries.</returns>
+    /// <exception cref="Exception">Thrown when an error occurs while retrieving the countries.</exception>
     [Get("/v2/regionalbloc/{regionalbloc}")]
     Task<List<Country>> GetCountriesByRegionalBlock(
         [AliasAs("regionalbloc")] string regionalBlock,
@@ -98,6 +106,7 @@ public interface ICountryLayer
     /// <param name="callingCode">The calling code to search for.</param>
     /// <param name="cancellationToken">A cancellation token to cancel the operation.</param>
     /// <returns>A task that represents the asynchronous operation. The task result contains a list of countries.</returns>
+    /// <exception cref="Exception">Thrown when an error occurs while retrieving the countries.</exception>
     [Get("/v2/callingcode/{callingcode}")]
     Task<List<Country>> GetCountriesByCallingCode(
         [AliasAs("callingcode")] string callingCode,
@@ -109,6 +118,7 @@ public interface ICountryLayer
     /// <param name="alphaCode">The alpha code to search for.</param>
     /// <param name="cancellationToken">A cancellation token to cancel the operation.</param>
     /// <returns>A task that represents the asynchronous operation. The task result contains a list of countries.</returns>
+    /// <exception cref="Exception">Thrown when an error occurs while retrieving the countries.</exception>
     [Get("/v2/alpha/{code}")]
     Task<List<Country>> GetCountriesByAlphaCode(
         [AliasAs("code")] string alphaCode,

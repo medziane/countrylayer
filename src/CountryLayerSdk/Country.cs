@@ -1,87 +1,151 @@
 namespace CountryLayerSdk;
 
+/// <summary>
+/// Represents a country with various properties such as name, codes, population, etc.
+/// </summary>
 public record Country
 {
-    public string Name { get; init; }
-    public string[]? TopLevelDomain { get; init; }
-    public string Alpha2Code { get; init; }
-    public string Alpha3Code { get; init; }
-    public string[] CallingCodes { get; init; }
-    public string Capital { get; init; }
-    public string[] AltSpellings { get; init; }
-    public string Region { get; init; }
-    public string Subregion { get; init; }
-    public int Population { get; init; }
-    public double[] Latlng { get; init; }
-    public string Demonym { get; init; }
-    public double Area { get; init; }
-    public double? Gini { get; init; }
-    public string[] Timezones { get; init; }
-    public string[] Borders { get; init; }
-    public string NativeName { get; init; }
-    public string NumericCode { get; init; }
-    public Currency[]? Currencies { get; init; }
-    public Language[] Languages { get; init; }
-    public Translations Translations { get; init; }
-    public string Flag { get; init; }
-    public RegionalBloc[] RegionalBlocs { get; init; }
-    public string Cioc { get; init; }
-}
-
-public record Currency
-{
-    public string? Code { get; init; }
+    /// <summary>
+    /// Gets the name of the country.
+    /// </summary>
+    [JsonPropertyName("name")]
     public string? Name { get; init; }
-    public string? Symbol { get; init; }
-}
 
-public record Language
-{
-    [JsonPropertyName("iso639_1")]
-    public string Iso6391 { get; init; }
+    /// <summary>
+    /// Gets the top-level domains of the country.
+    /// </summary>
+    [JsonPropertyName("topLevelDomain")]
+    public string[]? TopLevelDomain { get; init; }
 
-    [JsonPropertyName("iso639_2")]
-    public string Iso6392 { get; init; }
+    /// <summary>
+    /// Gets the alpha-2 code of the country.
+    /// </summary>
+    [JsonPropertyName("alpha2Code")]
+    public string? Alpha2Code { get; init; }
 
-    public string Name { get; init; }
-    public string NativeName { get; init; }
-}
+    /// <summary>
+    /// Gets the alpha-3 code of the country.
+    /// </summary>
+    [JsonPropertyName("alpha3Code")]
+    public string? Alpha3Code { get; init; }
 
-public record Translations
-{
-    [JsonPropertyName("br")]
-    public string Brazilian { get; init; }
+    /// <summary>
+    /// Gets the calling codes of the country.
+    /// </summary>
+    [JsonPropertyName("callingCodes")]
+    public string[]? CallingCodes { get; init; }
 
-    [JsonPropertyName("de")]
-    public string German { get; init; }
+    /// <summary>
+    /// Gets the capital of the country.
+    /// </summary>
+    [JsonPropertyName("capital")]
+    public string? Capital { get; init; }
 
-    [JsonPropertyName("es")]
-    public string Spanish { get; init; }
+    /// <summary>
+    /// Gets the alternative spellings of the country's name.
+    /// </summary>
+    [JsonPropertyName("altSpellings")]
+    public string[]? AltSpellings { get; init; }
 
-    [JsonPropertyName("fa")]
-    public string Persian { get; init; }
+    /// <summary>
+    /// Gets the region of the country.
+    /// </summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; init; }
 
-    [JsonPropertyName("fr")]
-    public string French { get; init; }
+    /// <summary>
+    /// Gets the subregion of the country.
+    /// </summary>
+    [JsonPropertyName("subregion")]
+    public string? Subregion { get; init; }
 
-    [JsonPropertyName("hr")]
-    public string Croatian { get; init; }
+    /// <summary>
+    /// Gets the population of the country.
+    /// </summary>
+    [JsonPropertyName("population")]
+    public int? Population { get; init; }
 
-    [JsonPropertyName("it")]
-    public string Italian { get; init; }
+    /// <summary>
+    /// Gets the latitude and longitude coordinates of the country.
+    /// </summary>
+    [JsonPropertyName("latlng")]
+    public double[]? Latlng { get; init; }
 
-    [JsonPropertyName("ja")]
-    public string Japanese { get; init; }
+    /// <summary>
+    /// Gets the demonym of the country.
+    /// </summary>
+    [JsonPropertyName("demonym")]
+    public string? Demonym { get; init; }
 
-    [JsonPropertyName("nl")]
-    public string Dutch { get; init; }
+    /// <summary>
+    /// Gets the area of the country in square kilometers.
+    /// </summary>
+    [JsonPropertyName("area")]
+    public double? Area { get; init; }
 
-    [JsonPropertyName("pt")]
-    public string Portuguese { get; init; }
-}
+    /// <summary>
+    /// Gets the Gini coefficient of the country.
+    /// </summary>
+    [JsonPropertyName("gini")]
+    public double? Gini { get; init; }
 
-public record RegionalBloc
-{
-    public string Acronym { get; init; }
-    public string Name { get; init; }
+    /// <summary>
+    /// Gets the timezones of the country.
+    /// </summary>
+    [JsonPropertyName("timezones")]
+    public string[]? Timezones { get; init; }
+
+    /// <summary>
+    /// Gets the borders of the country.
+    /// </summary>
+    [JsonPropertyName("borders")]
+    public string[]? Borders { get; init; }
+
+    /// <summary>
+    /// Gets the native name of the country.
+    /// </summary>
+    [JsonPropertyName("nativeName")]
+    public string? NativeName { get; init; }
+
+    /// <summary>
+    /// Gets the numeric code of the country.
+    /// </summary>
+    [JsonPropertyName("numericCode")]
+    public string? NumericCode { get; init; }
+
+    /// <summary>
+    /// Gets the currencies used in the country.
+    /// </summary>
+    [JsonPropertyName("currencies")]
+    public Currency[]? Currencies { get; init; }
+
+    /// <summary>
+    /// Gets the languages spoken in the country.
+    /// </summary>
+    [JsonPropertyName("languages")]
+    public Language[]? Languages { get; init; }
+
+    /// <summary>
+    /// Gets the translations of the country's name.
+    /// </summary>
+    [JsonPropertyName("translations")]
+    public Translations? Translations { get; init; }
+
+    /// <summary>
+    /// Gets the flag URL of the country.
+    /// </summary>
+    [JsonPropertyName("flag")]
+    public string? Flag { get; init; }
+
+    /// <summary>
+    /// Gets the regional blocks the country belongs to.
+    /// </summary>
+    [JsonPropertyName("regionalBlocs")]
+    public RegionalBlock[]? RegionalBlocks { get; init; }
+
+    /// <summary>
+    /// Gets the CIOC code of the country.
+    /// </summary>
+    [JsonPropertyName("cioc")]
+    public string? Cioc { get; init; }
 }

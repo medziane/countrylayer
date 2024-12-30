@@ -1,5 +1,8 @@
 namespace CountryLayerSdk;
 
+/// <summary>
+/// Provides methods for accessing country-related data from the CountryLayer API.
+/// </summary>
 public class CountryLayer :
     ICountryLayer
 {
@@ -7,16 +10,30 @@ public class CountryLayer :
     private const string AccessKey = "access_key";
     private readonly ICountryLayer _countryLayer;
 
+    /// <summary>
+    /// Initializes a new instance of the <see cref="CountryLayer"/> class with the specified API key.
+    /// </summary>
+    /// <param name="apiKey">The API key for accessing the CountryLayer API.</param>
     public CountryLayer(string apiKey)
         : this(apiKey, CreateQueryStringInjectingHttpMessageHandler(apiKey))
     {
     }
 
+    /// <summary>
+    /// Initializes a new instance of the <see cref="CountryLayer"/> class with the specified API key and HTTP client.
+    /// </summary>
+    /// <param name="apiKey">The API key for accessing the CountryLayer API.</param>
+    /// <param name="httpClient">The HTTP client to use for making requests.</param>
     public CountryLayer(string apiKey, HttpClient httpClient)
         : this(apiKey, httpClient.GetHandler())
     {
     }
 
+    /// <summary>
+    /// Initializes a new instance of the <see cref="CountryLayer"/> class with the specified API key and HTTP message handler.
+    /// </summary>
+    /// <param name="apiKey">The API key for accessing the CountryLayer API.</param>
+    /// <param name="handler">The HTTP message handler to use for making requests.</param>
     public CountryLayer(string apiKey, HttpMessageHandler handler)
     {
         var refitSettings = new RefitSettings
@@ -45,7 +62,7 @@ public class CountryLayer :
 
     Task<List<Country>> ICountryLayer.GetCountriesByCapital(string capital, CancellationToken cancellationToken) => _countryLayer.GetCountriesByCapital(capital, cancellationToken);
 
-    public Task<List<Country>> GetCountriesByName(string name, bool fullText, CancellationToken cancellationToken) => _countryLayer.GetCountriesByName(name, fullText, cancellationToken);
+    Task<List<Country>> ICountryLayer.GetCountriesByName(string name, bool fullText, CancellationToken cancellationToken) => _countryLayer.GetCountriesByName(name, fullText, cancellationToken);
 
     Task<List<Country>> ICountryLayer.GetCountriesByLanguage(string language, CancellationToken cancellationToken) => _countryLayer.GetCountriesByLanguage(language, cancellationToken);
 

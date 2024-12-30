@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFrameworks>net6.0;net7.0;net8.0</TargetFrameworks>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <Title>CountryLayer</Title>
+        <Description>The countrylayer service provides common information about countries via a REST API. With this SDK, users will be able to get detailed information about countries in the world. Because they can filter by name of a country, language, code, currency, the capital city, calling code, region, or regional bloc.</Description>
+        <Copyright>Copyright (c) MED ZIANE 2025</Copyright>
+        <PackageProjectUrl>https://github.com/medziane/countrylayer</PackageProjectUrl>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
+        <RepositoryUrl>https://github.com/medziane/countrylayer</RepositoryUrl>
+        <PackageTags>countrylayer country layer restcountry rest country api sdk .NET </PackageTags>
+        <Authors>MED ZIANE</Authors>
+        <PackageId>CountryLayer</PackageId>
+        <PackageVersion>1.0.0</PackageVersion>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Refit" Version="8.0.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <None Include="..\..\README.md" Pack="true" PackagePath="\" />
+    </ItemGroup>
+
+</Project>

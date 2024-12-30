@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CountryLayerSdk", "src\CountryLayerSdk\CountryLayerSdk.csproj", "{834EB315-D671-414B-852A-8CBDED5C24B0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CountryLayer.Sample", "sample\CountryLayer.Sample\CountryLayer.Sample.csproj", "{047FFF92-5544-4C7B-B75C-DBE4A09A57F9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{834EB315-D671-414B-852A-8CBDED5C24B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{834EB315-D671-414B-852A-8CBDED5C24B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{834EB315-D671-414B-852A-8CBDED5C24B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{834EB315-D671-414B-852A-8CBDED5C24B0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{047FFF92-5544-4C7B-B75C-DBE4A09A57F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{047FFF92-5544-4C7B-B75C-DBE4A09A57F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{047FFF92-5544-4C7B-B75C-DBE4A09A57F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{047FFF92-5544-4C7B-B75C-DBE4A09A57F9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

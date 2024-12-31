@@ -15,7 +15,7 @@
         <PackageTags>countrylayer country layer restcountry rest country api sdk .NET </PackageTags>
         <Authors>MED ZIANE</Authors>
         <PackageId>CountryLayer</PackageId>
-        <PackageVersion>1.0.0</PackageVersion>
+        <PackageVersion>1.0.1</PackageVersion>
     </PropertyGroup>
 
     <ItemGroup>
